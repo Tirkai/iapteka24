@@ -1,0 +1,21 @@
+._mark-edges{
+  transition: ease 0.3s;
+  box-shadow: 0 0 0 1px rgb(200,200,200);
+  &:hover{
+    box-shadow: 0 0 1px 1px rgba(255,0,0,0.5);
+  }
+}
+._dev-todo{
+  display: none;
+  width: 100%;
+  text-align: center;
+  background: rgb(200,50,50);
+  font-size: 12px;
+  padding: 5px;
+  color: white;
+  transition: linear 1s 1s;
+  z-index: 5;
+  & a{
+    color: @color-green;
+  }
+}

@@ -1,0 +1,48 @@
+.pharmacy-info{
+    &__container{
+        display: flex;
+        width: 800px;
+        min-height: 400px;
+        margin: -24px;
+    }
+    &__image{
+        width: 100%;
+        height: 210px;
+        background-size: cover;
+    }
+    &__title{
+        padding: 12px 20px;
+        border-bottom: 1px solid #E8E8E8;
+    }
+    &__info{
+        width: 400px;
+    }
+    &__data{
+        padding: 12px 20px;
+        &__cell{
+            padding: 3px 7px 3px 0;
+        }
+    }
+    &__actions{
+        padding: 12px 20px;
+    }
+    &__map{
+        flex-grow: 1;
+    }
+
+}
+@media screen and (max-width: @responsive-mobile){
+    .pharmacy-info{
+        width: 95vw;
+        &__container{
+            width: calc(100% + 48px);
+            
+        }
+        &__info{
+            width: 100%;
+        }
+        &__container{
+            flex-direction: column;
+        }
+    }
+}

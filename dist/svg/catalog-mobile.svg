@@ -1,0 +1,8 @@
+<svg width="19" height="15" viewBox="0 0 19 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M3.1875 0H1.0625C0.475469 0 0 0.475469 0 1.0625V3.1875C0 3.77453 0.475469 4.25 1.0625 4.25H3.1875C3.77453 4.25 4.25 3.77453 4.25 3.1875V1.0625C4.25 0.476 3.77453 0 3.1875 0ZM3.1875 3.1875H1.0625V1.0625H3.1875V3.1875Z" fill="#121313"/>
+<line y1="-0.5" x2="11" y2="-0.5" transform="translate(8 2.625)" stroke="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M3.1875 0H1.0625C0.475469 0 0 0.475469 0 1.0625V3.1875C0 3.77453 0.475469 4.25 1.0625 4.25H3.1875C3.77453 4.25 4.25 3.77453 4.25 3.1875V1.0625C4.25 0.476 3.77453 0 3.1875 0ZM3.1875 3.1875H1.0625V1.0625H3.1875V3.1875Z" transform="translate(0 5)" fill="#121313"/>
+<line y1="-0.5" x2="11" y2="-0.5" transform="translate(8 7.625)" stroke="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M3.1875 0H1.0625C0.475469 0 0 0.475469 0 1.0625V3.1875C0 3.77453 0.475469 4.25 1.0625 4.25H3.1875C3.77453 4.25 4.25 3.77453 4.25 3.1875V1.0625C4.25 0.476 3.77453 0 3.1875 0ZM3.1875 3.1875H1.0625V1.0625H3.1875V3.1875Z" transform="translate(0 10)" fill="#121313"/>
+<line y1="-0.5" x2="11" y2="-0.5" transform="translate(8 12.625)" stroke="black"/>
+</svg>

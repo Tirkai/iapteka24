@@ -1,0 +1,104 @@
+.order{
+  margin-bottom: 100px;
+  &__container{
+    display: flex;
+    padding: 40px;
+    justify-content: space-around;
+  }
+  &__column{
+    //width: 45%;
+    margin: 0 20px;
+
+  }
+  &__products-list{
+    &__count{
+      font-weight: 600;
+    }
+    &__container{
+      max-height: 300px;
+      &__item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px 0;
+        padding-right: 30px;
+        font-size: @font-size-small;
+        max-width: 500px;
+        &__title{
+          color: @color-light-grey;
+          max-width: 80%;
+          margin-right: 10px;
+          &_miss{
+            text-decoration: line-through;
+            opacity: 0.5;
+          }
+        }
+        &__info{
+          text-align: right;
+          &__price{
+            color: @color-grey;
+          }
+          &__count{
+            color: @color-green;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    &__totals{
+      margin-top: 50px;
+      td{
+        padding: 5px 15px;
+        padding-left: 0;
+        color: @color-grey;
+      }
+    }
+    &__summary{
+      margin-top: 10px;
+      &__price{
+        font-size: @font-size-middle-title;
+        color: @color-grey;
+        font-weight: 600;
+      }
+    }
+  }
+  &__form{
+    display: flex;
+    flex-direction: column;
+    &__input{
+      max-width: 350px;
+      background-color: #fbfbfb;
+      //width: 100%;
+      margin: 12px 0;
+      &_error{
+        border-color: @color-red !important;
+      }
+      &_textarea{
+        height: 180px;
+      }
+    }
+    &__policy{
+      display: flex;
+      align-items: center;
+      padding: 10px 0;
+      & > span{
+        padding-left: 10px;
+        font-size: @font-size-small;
+        color: @color-grey;
+      }
+    }
+  }
+  &__button{
+    max-width: 350px;
+  }
+}
+@media screen and (max-width: @responsive-mobile) {
+  .order{
+    &__container{
+      flex-direction: column;
+    }
+    &__column{
+      width: 100%;
+    }
+  }
+}

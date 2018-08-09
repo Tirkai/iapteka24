@@ -1,0 +1,111 @@
+.geo{
+  &-page{
+    //padding: 40px;
+    &__container{
+      display: flex;
+      flex-direction: column;
+      //width: 600px;
+      min-height: 570px;
+      &__empty-response{
+        padding: 10px 0;
+        color: @color-grey;
+      }
+      &__list{
+        //width: 600px;
+        &__item{
+          background: white;
+          padding: 15px 5px;
+          &__column{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            &__item{
+              padding: 10px 20px;
+              color: @color-light-grey;
+              line-height: 24px;
+              &__title{
+                width: 25%;
+              }
+              &__phone{
+                width: 15%;
+              }
+              &__select{
+                max-width: 230px;
+              }
+            }
+          }
+          &:nth-child(2n){
+            background: @color-white-grey-1;
+          }
+        }
+      }
+      &__column{
+        padding: 15px;
+        &:first-child{
+          padding-left: 0;
+        }
+        &:last-child{
+          padding-right: 0;
+        }
+        &_width-20{width: 20%;}
+        &_width-30{width: 30%;}
+        &_width-50{width: 50%;}
+      }
+      &__regions{
+        height: 100%;
+        &__item{
+          display: flex;
+          align-items: center;
+          padding: 0 15px;
+          height: 40px;
+          border: 1px solid @color-white-grey-3;
+          cursor: pointer;
+
+          &:not(:last-child){
+            border-bottom-width: 0;
+          }
+          &:hover{
+            background: @color-green;
+            color: white;
+          }
+        }
+      }
+      &__pharmacy{
+        height: 100%;
+        &__item{
+          color: @color-brown;
+          padding: 12px 0;
+          cursor: pointer;
+          text-decoration: underline;
+        }
+      }
+      &__map{
+        width: 100%;
+        height: 420px;
+        background-size: cover;
+        //background: url("../img/map-placeholder.png");
+        overflow: hidden;
+      }
+    }
+  }
+}
+.select-pharmacy{
+  width: 300px;
+  &__item{
+    padding: 5px 0;
+  }
+  &__name{
+    font-size: @font-size-main;
+    color: @color-grey;
+  }
+  &__time{
+    font-size: @font-size-small;
+    color: @color-light-grey;
+  }
+  &__phone{
+    font-size: @font-size-main;
+    color: @color-grey;
+    margin-bottom: 10px;
+  }
+
+}

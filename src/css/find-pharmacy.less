@@ -1,0 +1,34 @@
+.find-pharmacy{
+    &__container{
+        width: 600px;
+    }
+    &__search-container{
+    }
+    &__search-form{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    &__input{
+        height: 50px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        flex-grow: 1;
+        text-transform: capitalize;
+    }
+    &__results{
+        padding-top: 15px;
+        &__item{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+        }
+    }
+}
+@media screen and (max-width: @responsive-mobile){
+    .find-pharmacy{
+        &__container{
+            width: 100%;
+        }
+    }
+}

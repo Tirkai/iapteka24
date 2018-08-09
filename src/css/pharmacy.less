@@ -1,0 +1,31 @@
+.pharmacy{
+  &__container{
+    display: flex;
+  }
+  &__info{
+    width: 380px;
+    &__open{
+      margin-bottom: 30px;
+      color: @color-green;
+      &_is-close{
+        color: @color-red;
+      }
+    }
+    &__item{
+      &__title{
+        margin: 10px 0;
+      }
+      &__content{
+        color: @color-light-grey;
+        font-size: @font-size-small;
+      }
+      &__list li{
+        font-size: inherit;
+        padding: 3px 0;
+      }
+    }
+  }
+  &__map{
+    background: red;
+  }
+}

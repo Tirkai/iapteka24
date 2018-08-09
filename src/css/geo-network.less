@@ -1,0 +1,128 @@
+/*
+.geo-network{
+    &__container{
+        margin-top: 30px;
+        background: white;
+        border: 1px solid #eee;
+    }
+    &__nav{
+        display: flex;
+        align-items: center;
+        height: 70px;
+        border-bottom: 1px solid #eee;
+        &__title{
+            width: 270px;
+            padding: 0 40px;
+        }
+        &__filter{
+            width: calc(100% - 270px);
+        }
+    }
+    &__content{
+        display: flex;
+    }
+    &__pharmacy{
+        flex-basis: 270px;
+        &__container{
+
+        }
+        &__item{
+            width: 270px;
+            padding: 20px 40px;
+            border-bottom: 1px solid #eee;
+            &__title{
+                color: #444444;
+                margin-bottom: 3px;
+                font-weight: bold;
+            }
+            &__adress{
+                font-size: 12px;
+                color: #444444;
+                margin-bottom: 3px;
+            }
+            &__actions{
+                & a { font-size: 12px; }
+                
+            }
+        }
+    }
+    &__map{
+        flex-grow: 1;
+        overflow: hidden;
+    }
+}
+*/
+.geo-network{
+    &__filter{
+        &__container{
+            display: flex;
+            align-items: center;
+        }
+        &__title{
+            margin-right: 30px;
+        }
+        &__ui-select{
+            width: 207px;
+        }
+    }
+    &__map{
+        position: relative;
+        height: 275px;
+    }
+    &__list{
+        &__item{
+            padding: 20px 35px;
+            border-bottom: 1px solid #E8E8E8;
+            &__row{
+                display: flex;
+                align-items: center;
+            }
+            &__title{
+                color: @color-green;
+                font-size: 16px;
+            }
+            &__adress{
+                font-size: 16px;
+            }
+            &__time{
+                font-size: 16px;
+            }
+            &__icon{
+                margin-right: 10px;
+            }
+            &__meta{
+                margin-bottom: 5px;
+            }
+            &__labels{
+                display: flex;
+                padding: 15px 0;
+                flex-wrap: wrap;
+                margin: 0 -3px;
+                &__el{
+                    display: none;
+                    margin-right: 25px;                  
+                    color: @color-grey;
+                    background: rgb(240,240,240);
+                    margin: 3px;
+                    padding: 5px;
+                    border-radius: 5px;    
+                    &.active{
+                        display: flex;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: @responsive-mobile){
+    .geo-network{
+        &__list{
+            &__item{
+                &__row{
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+            }
+        }
+    }
+}

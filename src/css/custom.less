@@ -1,0 +1,80 @@
+.jGrowl{
+  position: fixed;
+  top: 10px;
+  right: 70px;
+  z-index: 10;
+  &-notification{
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 10px;
+    border-radius: 25px;
+  }
+  &-header{
+    background: red;
+  }
+  &-message{
+    padding: 15px;
+    color: black;
+    border-radius: 25px;
+    color: white;
+  }
+  &-close{
+    position: absolute;
+    top: 0;
+    right: -60px;
+    width: 50px;
+    height: 50px;
+    border: 0;
+    background: none;
+    font-size: 24px;
+    border-radius: 50%;
+
+  }
+  & .alert{
+    border-radius: 25px;
+    background: rgba(58,197,130,0.8);
+    border: none;
+
+  }
+}
+
+.ui-slider-handle{
+  top: -6px !important;
+}
+.fancybox-active{
+  overflow: hidden !important;
+}
+
+.ms-notify{
+  padding: 40px;
+}
+.popup{
+  &__miss-product{
+    &__container{
+      min-width: 320px;
+      max-width: 460px;
+    }
+    &__item{
+      padding: 5px 0;
+      color: @color-grey;
+    }
+    &__close{
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+  }
+}
+.ui-state-default{
+  border: none !important;
+}
+.ui-state-hover{
+  cursor: grab;
+  background: @color-green !important;
+}
+#ui-id-1{
+  visibility: hidden !important;
+}
+.fancybox-button.fancybox-button--share{
+  display: none !important;
+}

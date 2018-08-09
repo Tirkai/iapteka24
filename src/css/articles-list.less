@@ -1,0 +1,114 @@
+.articles-list{
+  &__item{
+    padding: 30px;
+  }
+  &__container{
+    display: flex;  
+  }
+  &__title{
+    padding: 30px 40px;
+    border-bottom: 1px solid @color-white-grey-2;
+  }
+  &__list{
+    background: white;
+    border: 1px solid @color-white-grey-2;
+    color: @color-grey;
+    line-height: 27px;
+    width: 100%;
+    
+    &__description{
+      line-height: 27px;
+    }
+    &__item{
+      padding: 30px 40px;
+      border-bottom: 1px solid @color-white-grey-2;
+      &__title{
+        font-size: @font-size-small-title;
+        & a{
+          color: inherit;
+        }
+      }
+      &__meta{
+        font-size: @font-size-small;
+        color: @color-light-grey;
+        padding: 10px 0;
+      }
+      &__content{
+        display: flex;
+        align-items: flex-start;
+        &__picture{
+          flex-basis: 130px;
+          & img{
+            width: 130px;
+          }
+        }
+        &__text{
+          padding-left: 30px;
+        }
+      }
+    }
+  }
+  &__similar{
+    &__item{
+      display: flex;
+      &__picture{
+        width: 80px;
+        height: 80px;
+        & img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+      &__content{
+        padding: 10px;
+        &__title{
+          color: @color-grey;
+          margin-bottom: 5px;
+        }
+        &__date{
+          color: @color-white-grey-3;
+        }
+      }
+    }
+  }
+  & p{
+    padding-bottom: 10px;
+  }
+  & li{
+    padding-bottom: 10px;
+    padding-left: 10px;
+    line-height: 25px;
+    margin-left: 18px;
+
+  }
+  ul{
+    padding: 10px 0;
+    list-style: disc;
+
+  }
+}
+@media screen and (max-width: @responsive-mobile){
+  .articles-list{
+    &__container{
+      display: flex;
+      flex-direction: column;
+    }
+    &__sidebar{
+      order: 1;
+    }
+    &__list{
+      order: 0;
+      &__item{
+        &__content{
+          flex-direction: column;
+          &__text{
+            padding: 0;
+          }
+          &__picture{
+            flex-basis: auto;
+          }
+        }
+      }
+    }
+  }
+}

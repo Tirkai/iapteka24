@@ -1,0 +1,51 @@
+.auth{
+  margin-bottom: 100px;
+  &__container{
+    display: flex;
+    justify-content: space-between;
+    &__item{
+      width: 40%;
+      padding: 35px 0;
+      &__input{
+        margin-top: 15px;
+        width: 100%;
+      }
+      &__field-description{
+        padding: 10px 0 10px 20px;
+        color: @color-light-grey;
+        font-size: @font-size-small;
+      }
+    }
+    &__register{
+      border: 1px solid @color-white-grey-3;
+      padding: 35px;
+      box-shadow: 0 0 24px rgba(49, 62, 81, 0.3);
+      width: 45%;
+      &__policy{
+        display: flex;
+        align-items: baseline;
+        margin-top: 10px;
+        font-size: @font-size-small;
+        color: @color-grey;
+        &__text{
+          padding: 10px;
+          font-size: @font-size-small;
+        }
+      }
+    }
+  }
+  & .button{
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: @responsive-mobile) {
+  .auth{
+    &__container{
+      flex-direction: column;
+      &__item{
+        width: 100%;
+        padding: 10px;
+      }
+    }
+  }
+}
