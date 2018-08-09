@@ -36,7 +36,7 @@ module.exports = {
             },
             {
                 test: /\.less$/,
-                loader: ExtractTextPlugin.extract("css-loader!less-loader?minimize")
+                loader: ExtractTextPlugin.extract("css-loader!less-loader?sourceMap")
             },
         ]
     },

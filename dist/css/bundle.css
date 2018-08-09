@@ -1520,6 +1520,9 @@ sup {
 .input-text_wide {
   height: 50px;
 }
+.input-text_wide-width {
+  width: 100%;
+}
 .input-text_short {
   width: 350px;
 }
@@ -5631,6 +5634,17 @@ sup {
     justify-content: center;
   }
 }
+.promo__container {
+  display: flex;
+}
+.promo__input {
+  border-right: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.promo__button {
+  border-radius: 0px 5px 5px 0px;
+}
 .pharmacy-page__meta__item {
   display: flex;
   padding: 5px 0;
@@ -5654,6 +5668,16 @@ sup {
   background: #e6e6e6;
   width: 100%;
   height: 275px;
+}
+.pharmacy-page__feedback__info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  height: calc(100% - 30px);
+  margin-top: 30px;
+  font-size: 18px;
+  background: #F7F4E8;
 }
 .pharmacy__container {
   display: flex;

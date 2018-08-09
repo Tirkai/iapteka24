@@ -1,7 +1,14 @@
 class OrderStage{
     static checkbox = null;
+    static promo = null;
     static init(){
         this.confirmPolicyCheck();
+        this.promoInit();
+    }
+    static promoInit(){
+        this.promo = new Promo({
+            form: $(".stage__order__promo"),
+        }).init();
     }
     static confirmPolicyCheck(){
         let $element = $("#order-policy-confirm");

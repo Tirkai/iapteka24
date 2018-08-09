@@ -15,7 +15,8 @@ const Config = {
   },
   endpoints: {
     feedback: "/endpoints/feedback.php",
-    optics: "/endpoints/optics.php"
+    optics: "/endpoints/optics.php",
+    promo:  "/endpoints/promo.php"
   },
   price: {
     minPrice: 0,
@@ -72,7 +73,6 @@ const DefineConst = {
   AUTH_FRAME_LOGIN: "login",
   AUTH_FRAME_REGISTER: "register",
   AUTH_FRAME_VERIFY: "verify"
-
 }
 export {
   Config,

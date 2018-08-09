@@ -161,6 +161,15 @@ class FeedbackBinding {
             }
         });
 
+        FeedbackController.createForm({
+            name: "pharmacyPageFeedback",
+            action: "review",
+            form: $("#pharmacy-feedback"),
+            props: {
+                submitHandler: () => $("#pharmacy-feedback").html(`<span class="highlight-text_green">Ваша заявка отправлена</span>`)
+            }
+        });
+
         $(".js-popup-feedback-show").each((i, item) => $(item).on("click",() => FeedbackController.forms[$(item).data().action].show()));
 
     }

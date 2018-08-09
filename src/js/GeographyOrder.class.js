@@ -1,10 +1,11 @@
 class GeographyOrder {
     static orderList = [];
+    static frames = [];
     static isCompleted = false;
     static isRendered = false;
 
     static init() {
-        $(".stages__geo__choose__item").each((i, item) => {
+        $(".js-choose-geo").each((i, item) => {
             let data = $(item).data();
             this.orderList.push(new GeographyOrderProductsList({
                 element: $(item),
@@ -16,6 +17,12 @@ class GeographyOrder {
                 enabled: data.enabled
             }).init());
             this.isCompleted = true;
+        });
+        $(".stages__geo__frame-control").each((i, item) => {
+            this.frames.push(new GeographyOrderFrame({
+                element: $(item).attr("data-frame"),
+                control: $(item)
+            }).init());
         });
         $(".stages__geo__order__back").on("click", () => this.mobileOrderDetailShow(false));
         this.helpers();
@@ -69,6 +76,24 @@ class GeographyOrder {
     }
 
 }
+
+class GeographyOrderFrame{
+    constructor(params){
+        this.element = $("#" + params.element);
+        this.control = $(params.control);
+    }
+    init(){
+        this.control.on("click", this.select.bind(this));
+        return this;
+    }
+    select(){
+        GeographyOrder.frames.forEach(item => {
+            if(item == this) $(this.element).show();
+            else $(item.element).hide();
+        })
+    }
+}
+
 class GeographyOrderProductsList {
     constructor(params) {
         this.products = params.products;

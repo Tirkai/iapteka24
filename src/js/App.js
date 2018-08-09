@@ -18,6 +18,7 @@ import { YandexMapApi, Map } from './YandexMapApi.class.js';
 import { WindowState } from './WindowState.class.js';
 import { Distance } from './Distance.class.js';
 import { CatalogSearchController, CatalogSearchElement } from './CatalogSearchController.class.js';
+import { Promo } from './Promo.class.js';
 import { Cart } from './Cart.class.js';
 import { CartProduct } from './CartProduct.class.js';
 import { GeographyOrder, GeographyOrderProductsList } from './GeographyOrder.class.js';
@@ -70,6 +71,7 @@ class AppController{
             {name: "Map", module: Map},
             {name: "CatalogSearchController", module: CatalogSearchController},
             {name: "CatalogSearchElement", module: CatalogSearchElement},
+            {name: "Promo", module: Promo},
             {name: "Cart", module: Cart},
             {name: "CartProduct", module: CartProduct},
             {name: "GeographyOrder", module: GeographyOrder},
