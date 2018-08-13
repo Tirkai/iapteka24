@@ -6,6 +6,7 @@ const Config = {
   dataRequest: {
     pharmacies: '/data/pharmacies.json',
     msearch2: '/assets/components/msearch2/action.php',
+    minishop2: '/assets/components/minishop2/action.php',
     auth: '/'
   },
   responsive: {
