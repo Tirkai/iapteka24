@@ -5,6 +5,7 @@ class MainTemplate {
     this.mobileMenu();
     this.mobileExpander();
     this.mobileSearchButton();
+    this.bindSearchButton();
   }
   static inputPhoneMask() {
     let selector = "input[name='phone'],.mask-phone";
@@ -41,10 +42,9 @@ class MainTemplate {
     */
   }
   static bindSearchButton() {
-    let searchQuery = function () {
-      window.location.href = '/catalog/?query=' + $(".search-field__input").val();
-    };
-    $(".search-form__search-field__search-button").on("click", searchQuery);
+    $(".search-form__search-field__search-button").on("click", () => {
+        window.location.href = '/catalog/?query=' + $(".search-field__input").val();
+    });
   }
   static mobileMenu() {
     let menuOpened = false;

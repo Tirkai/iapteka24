@@ -1,5 +1,6 @@
-import { Config } from "./config";
+import { Config, DefineConst } from "./config";
 import { Service } from "./Service.class";
+import { Debug } from "./Debug.class";
 
 class OrderStage{
     static checkbox = null;
@@ -48,12 +49,21 @@ class OrderStage{
         formData['m2_action'] = "order/add";
         console.log(formData);
         $.post(Config.dataRequest.minishop2, orderAddData).then(resp => {
-            console.log(resp);
+            Debug.log(JSON.parse(resp), "Add Order Response", this);
             $.post(Config.dataRequest.minishop2, Object.assign(formData, {
                 ms2_action: "order/submit"
-            })).then((resp) => {
+            })).then((resp) => {        
                 let response = JSON.parse(resp);
-                location.href = `/order?action=${Service.getQueryParams().action}&msorder=${response.data.msorder}`;
+                Debug.log(response, "Submit Order Response", this);
+                if(response.success){
+                    location.href = `/order?action=${Service.getQueryParams().action}&msorder=${response.data.msorder}`;
+                } else {
+                    Toast.createToast({
+                        type: DefineConst.STATUS_ERROR,
+                        content: "Ошибка оформления заказа"
+                    });
+                }
+                
             });
         })
         /*

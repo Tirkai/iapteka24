@@ -47,6 +47,7 @@ class FeedbackForm {
         let formData = $(this.form).serialize();
         let query = `msg_action=${this.action}&${formData}`;
         console.log(this);
+        Debug.log(query, "Feedback Send Query", this);
         $.post(this.props.endpoint, query).then((resp) => {
             let response = JSON.parse(resp);
             Debug.log([response, this.name, this], "Feedback Response", this);
@@ -119,14 +120,14 @@ class FeedbackBinding {
         });
         FeedbackController.createForm({
             name: "subscribe",
-            action: "subscribe",
+            action: "subscribe", 
             form: $(".subscribe__form"),
             props: {
-                submitHandler: () => {
+                successHandler: () => {
                     $(".subscribe__form").html(`
                         <span class="highlight-text_green">${Config.strings.feedbackSubscribe}</span>
                     `);
-                } 
+                }
             } 
         });
         FeedbackController.createForm({
@@ -148,7 +149,7 @@ class FeedbackBinding {
             action: "review",
             form: $("#post-order-review"),
             props: {
-                submitHandler: () => $("#post-order-review").html(`<span class="highlight-text_green">Спасибо за ваш отзыв</span>`)
+                successHandler: () => $("#post-order-review").html(`<span class="highlight-text_green">Спасибо за ваш отзыв</span>`)
             }
         });
 
@@ -157,16 +158,16 @@ class FeedbackBinding {
             action: "review",
             form: $("#review-page-form"),
             props: {
-                submitHandler: () => $("#review-page-form").html(`<span class="highlight-text_green">Спасибо за ваш отзыв</span>`)
+                successHandler: () => $("#review-page-form").html(`<span class="highlight-text_green">Спасибо за ваш отзыв</span>`)
             }
         });
 
         FeedbackController.createForm({
-            name: "pharmacyPageFeedback",
+            name: "pharmacyPage",
             action: "review",
             form: $("#pharmacy-feedback"),
             props: {
-                submitHandler: () => $("#pharmacy-feedback").html(`<span class="highlight-text_green">Ваша заявка отправлена</span>`)
+                successHandler: () => $("#pharmacy-feedback").html(`<span class="highlight-text_green">Ваша заявка отправлена</span>`)
             }
         });
 

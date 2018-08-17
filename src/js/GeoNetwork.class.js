@@ -254,7 +254,7 @@ class GeoNetwork {
                 <div class="col-md-8 col-sm-12">
                     <div class="geo-network__list__item__title highlight-links">
                         <a href="/pharmacy/${options.alias}">
-                            ${options.title}
+                            ${options.adress}
                         </a>
                     </div>
                     <div class="geo-network__list__item__labels">
@@ -269,7 +269,8 @@ class GeoNetwork {
                     <div class="geo-network__list__item__meta geo-network__list__item__adress align-center">
                         <img src="/dist/icons/geo-point.svg" class="geo-network__list__item__icon">
                         <div>
-                            ${options.adress}
+                            
+                            ${options.title}
                         </div>
                     </div>
                     <div class="geo-network__list__item__meta geo-network__list__item__time align-center">
