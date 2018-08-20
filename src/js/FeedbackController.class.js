@@ -50,7 +50,7 @@ class FeedbackForm {
         Debug.log(query, "Feedback Send Query", this);
         $.post(this.props.endpoint, query).then((resp) => {
             let response = JSON.parse(resp);
-            Debug.log([response, this.name, this], "Feedback Response", this);
+            Debug.log([response, this.name], "Feedback Response", this);
             this.props.submitHandler(response);
             if(response.status == DefineConst.STATUS_SUCCESS){
                 AnalyticsController.counter.callTarget(`Feedback${Service.letterCase(this.name)}Submit`);

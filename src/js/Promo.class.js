@@ -22,7 +22,6 @@ class Promo {
                         content: response.message,
                         type: DefineConst.STATUS_SUCCESS
                     });
-                    $.fancybox.open(JSON.stringify(response));
                 },
                 error: (response) => {
                     Toast.createToast({
