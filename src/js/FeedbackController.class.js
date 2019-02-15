@@ -1,4 +1,5 @@
 import { Config } from './config.js';
+import { GeoCheckout } from './GeoCheckout.class.js';
 class FeedbackController {
     static forms = {};
     static createForm(params) {
@@ -45,7 +46,7 @@ class FeedbackForm {
     }
     send() {
         let formData = $(this.form).serialize();
-        let query = `msg_action=${this.action}&${formData}`;
+        let query = `msg_action=${this.action}&${formData}&cityName=${GeoCheckout.geoData.cityName}`;
         console.log(this);
         Debug.log(query, "Feedback Send Query", this);
         $.post(this.props.endpoint, query).then((resp) => {

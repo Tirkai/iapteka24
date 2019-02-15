@@ -199,6 +199,19 @@
       }
     }
   }
+  &__select-geo{
+    &__container{
+      width: 300px;
+    }
+    &__list{
+      &__item{
+        color: @color-green;
+        padding: 5px 0;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
 }
 @media screen and (max-width: @responsive-mobile) {
   .popup{
@@ -251,5 +264,11 @@
         align-items: center;
       }
     }
+    &__select-geo{
+      &__container{
+        width: 100%;
+      }
+    }
   }
+
 }

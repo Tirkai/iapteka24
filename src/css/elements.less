@@ -1172,7 +1172,7 @@
   }
   & .button{
     height: 49px;
-    z-index: 4;
+    z-index: 1;
     transition: border-radius ease 0.3s;
     margin: 0px;
     width: 100px;
@@ -1194,7 +1194,7 @@
 
   }
   &__button{
-    z-index: 4;
+    z-index: 1;
   }
   &__live-search{
     max-height: 0;
@@ -1918,6 +1918,27 @@
   &-mobile-column{
 
   }
+}
+.geo-view{
+  display: flex;
+  align-items: center;
+  &__container{
+    display: inline-flex;
+    align-items: center;
+    padding: 7px;
+    border: 1px solid #3c9669;
+    border-radius: 5px;
+  }
+  &__icon{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+  }
+  &__text{
+    display: flex;
+    align-items: center;
+  }
+
 }
 @media screen and (max-width: @responsive-wrap){
   .wrapper{

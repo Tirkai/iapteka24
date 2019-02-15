@@ -128,6 +128,38 @@ sup{
       padding: 0 15px;
     }
   }
+  &__geo{
+    position: relative;
+    &__link{
+      cursor: pointer;
+    }
+    &__dropdown{
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 4;
+      &__container{
+        width: 320px;
+        padding: 20px;
+        background: white;
+        box-shadow: 0 3px 21px rgba(0, 0, 0, 0.1);
+      }
+      &__content{
+
+      }
+      &__title{
+        font-size: 18px;
+        padding: 20px 0;
+      }
+      &__actions{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+        grid-gap: 10px;
+      }
+    }
+  }
 }
 .mobile-menu{
   width: 100%;
@@ -555,14 +587,14 @@ sup{
   }
   .search-form{
     display: block;
-    position: fixed;
-    top: 50px;
-    z-index: 3;
+    //position: fixed;
+    //top: 50px;
+    //z-index: 3;
     width: 100%;
     background:white;
     box-shadow: 0 1px 8px 4px rgba(0, 0, 0, 0.04);
     z-index: 4;
-    transform: translateY(-70px);
+    //transform: translateY(-70px);
     transition: ease 0.3s;
     &_visible{
       transform: translateY(0);
@@ -586,7 +618,21 @@ sup{
     }  
   }
   .top-navigation{
-    display: none;
+    // display: none;
+    height: 0;
+    margin: -1px;
+    top: 0;
+    &__nav-links{
+      display: none;
+    }
+    &__geo{
+      &__dropdown{
+        position: fixed;
+        z-index: 5;
+        width: 100vw;
+        left: 0;
+      }
+    }
   }
   .top-navigation-mobile{
     position: fixed;

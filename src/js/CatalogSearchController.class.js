@@ -1,4 +1,5 @@
 import { UISearch } from './UISearch.class.js';
+import { GeoCheckout } from './GeoCheckout.class.js';
 const CS_DEFAULT = "CS_DEFAULT";
 const CS_NOTFOUND = "CS_NOTFOUND";
 const CS_LIST = "CS_LIST";
@@ -69,7 +70,8 @@ class CatalogSearchElement extends UISearch {
                 action: "search",
                 key: this.queryKey,
                 pageId: this.pageId,
-                query: query
+                query: query,
+                cityKey: GeoCheckout.geoData.cityKey
             }).then((resp) => {
                 Debug.log([query, JSON.parse(resp)], "Search Database Response", this);
                 callback(query, resp);

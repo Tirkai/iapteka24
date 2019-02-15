@@ -145,4 +145,5 @@ gulp.task('deploy', function () {
         })
         .pipe(connect.newer(config.ftp.url))
         .pipe(connect.dest(config.ftp.url));
+        console.log('deploy success');
 });

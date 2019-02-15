@@ -1,3 +1,5 @@
+import { GeoCheckout } from "./GeoCheckout.class";
+
 class MainTemplate {
   static init() {
     this.inputPhoneMask();
@@ -43,7 +45,7 @@ class MainTemplate {
   }
   static bindSearchButton() {
     $(".search-form__search-field__search-button").on("click", () => {
-        window.location.href = '/catalog/?query=' + $(".search-field__input").val();
+        window.location.href = '/catalog/?query=' + $(".search-field__input").val() + '&cityKey=' + GeoCheckout.geoData.cityKey;
     });
   }
   static mobileMenu() {

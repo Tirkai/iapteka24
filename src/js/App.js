@@ -22,6 +22,7 @@ import { Promo } from './Promo.class.js';
 import { Cart } from './Cart.class.js';
 import { CartProduct } from './CartProduct.class.js';
 import { GeographyOrder, GeographyOrderProductsList } from './GeographyOrder.class.js';
+import { GeoCheckout } from './GeoCheckout.class.js';
 import { OrderStage } from './OrderStage.class.js';
 import { Thanks } from './Thanks.class.js';
 import { ProductPage } from './ProductPage.class.js';
@@ -76,6 +77,7 @@ class AppController{
             {name: "CartProduct", module: CartProduct},
             {name: "GeographyOrder", module: GeographyOrder},
             {name: "GeographyOrderProductsList", module: GeographyOrderProductsList},
+            {name: "GeoCheckout", module: GeoCheckout},
             {name: "OrderStage", module: OrderStage},
             {name: "Thanks", module: Thanks},
             {name: "ProductPage", module: ProductPage},
